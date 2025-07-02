@@ -27,5 +27,6 @@ urlpatterns = [
     # It requires the refresh token to be sent in the request body
     # and returns a new access token.
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
-    path("api-auth/", include("rest_framework.urls"))
+    path("api-auth/", include("rest_framework.urls")),
+    path("api/",include("api.urls"))
 ]
