@@ -21,8 +21,8 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("api/user/register/", CreateUserView.as_view(), name="register"),
-    path("api/token/", TokenObtainPairView.as_view(), name="get_token"),
+    path("api/user/register/", CreateUserView.as_view(), name="register"),# This endpoint is used to register a new user or create a new user account.
+    path("api/token/", TokenObtainPairView.as_view(), name="get_token"), # This endpoint is used to obtain a JWT token or Login
     # This endpoint is used to refresh the JWT token
     # It requires the refresh token to be sent in the request body
     # and returns a new access token.
